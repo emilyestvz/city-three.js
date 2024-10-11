@@ -13,6 +13,24 @@ if(window.innerWidth > 800){
 
 document.body.appendChild( renderer.domElement );
 
+// Função para enviar alerta
+document.getElementById('alertButton').addEventListener('click', function (event) {
+    event.preventDefault(); // Previne o comportamento padrão do link
+    Swal.fire({
+    title: "Hello world! Não deixem de visitar meu GitHub.",
+    width: 500,
+    padding: "3em",
+    color: "#3d3d3d",
+    background: "#FFF",
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("/images/4hss.gif")
+      left top
+      no-repeat
+    `
+  });
+});
+  
 // Deixando responsivo
 window.addEventListener('resize', onWindowResize, false);
 function onWindowResize() {
@@ -259,6 +277,8 @@ var animate = function(){
     camera.lookAt(city.position);
     renderer.render(scene, camera);
 };
+
+
 
 
 // Chamar funções principais
