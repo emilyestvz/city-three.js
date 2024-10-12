@@ -24,7 +24,7 @@ document.getElementById('alertButton').addEventListener('click', function (event
     background: "#FFF",
     backdrop: `
       rgba(0,0,123,0.4)
-      url("/images/4hss.gif")
+      url("./images/4hss.gif")
       left top
       no-repeat
     `
